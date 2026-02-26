@@ -107,7 +107,7 @@ int main() {
 
     // create row threads
     for(int i = 0; i < SIZE; i++) {
-        parameters *data = (parameters *) malloc(sizeof(parameters)); // allocated dynamic memory
+        parameters *data = (parameters *) malloc(sizeof(parameters)); // allocated dynamic memory on heap so the data remains consistent
         data -> row = i; // assigned as each row
         data -> column = 0; // stays at column 0
         data -> index = i; // index that corresponds to the results array
